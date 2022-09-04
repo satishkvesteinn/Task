@@ -1,0 +1,95 @@
+.pageContainer {
+    background: white;
+    padding: 1.5rem 2rem;
+    width: 100%;
+  }
+  
+  .pageWrapper > * {
+    width: 100%;
+  }
+  
+  .pageWrapper p {
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  
+  .inputWrapper {
+    border-radius: 20px;
+    width: 100%;
+    background-color: rgba(228, 228, 228, 0.76);
+    height: 35px;
+    display: flex;
+    margin-bottom: 10px;
+    padding: 0px 15px;
+    align-items: center;
+  }
+  
+  .inputWrapper label {
+    user-select: none;
+    font-weight: 400;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    padding-left: 10px;
+  }
+  
+  .inputWrapper input {
+    height: 100%;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+  }
+  
+  .inputWrapper input[type="text"] {
+    width: 100%;
+    cursor: default;
+    margin: 0;
+    height: 100%;
+  }
+  
+  .radioWapper {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .button {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  button {
+    cursor: pointer;
+    background-color: rgb(241, 31, 161);
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 4px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .pageContainer {
+      padding: 1rem 0.5rem;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .radioWapper {
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    .inputWrapper {
+      height: 40px;
+    }
+  
+    .pageWrapper p {
+      margin-top: 20px;
+    }
+  }
+  
