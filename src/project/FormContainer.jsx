@@ -26,6 +26,8 @@ function FormContainer() {
 
   // checking valid inputs or not
   const checkFormInput = () => {
+
+    // define variable and intilaize default value
     let count = 0;
     let totalInputs = 0;
     let totalInputPercentage = 0;
@@ -33,6 +35,10 @@ function FormContainer() {
     Object.keys(formData).map((data) => {
       if (reg.test(formData[data]) && formData[data].length >= 3) {
         count++;
+        // move to next page ofter last page is field
+        if (+formData.licenseType > 0 && +formData.drivingNature > 0) {
+          setPage(1)
+        }
       } else {
         if (formData[data] !== "" && data !== "place" && data !== "fname") {
           count++;
@@ -50,11 +56,6 @@ function FormContainer() {
 
   // useEffect render every time after changing form input value
   useEffect(() => {
-
-    // move to next page ofter last page is field
-    if (+formData.licenseType > 0) {
-      setPage(1)
-    }
 
     // call checkforminput function
     checkFormInput();
